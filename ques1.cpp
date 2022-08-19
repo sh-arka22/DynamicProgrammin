@@ -25,9 +25,20 @@ void display2D(int **dp, int n, int m){
     cout<<endl;
 }
 
+int fiboMemo(int n, int *dp){
+    if(n<=1) return dp[n] = n;
+    if(dp[n] != -1) return dp[n];
+    int ans = fiboMemo(n-1, dp) + fiboMemo(n-2, dp);
+    return dp[n] = ans; 
+}
+
+
 int main(){
     file_i_o();
     int n;
     cin>>n;
     int dp[n+1];
+    fill(dp, dp+n+1, -1);
+    cout<<fiboMemo(n,dp)<<endl;
+    display1D(dp,n+1);
 }
