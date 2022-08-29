@@ -3,6 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 void file_i_o(){
+
 	#ifndef ONLINE_JUDGE
 	    freopen("input.txt", "r", stdin);
 	    freopen("output.txt", "w", stdout);
@@ -30,7 +31,7 @@ int recc(string s, int idx){
     if(idx == 0) return dp[idx] = 1;
     
     if(dp[idx] != -1) return dp[idx];
-    
+
     char ch1 = s[idx-1];
     int cnt = recc(s, idx-1);
     
@@ -80,5 +81,6 @@ int numDecodings(string s) {
 
 int main(){
     file_i_o();
+    cout<<numDecodings("123");
     cin>>n;
 }
