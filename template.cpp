@@ -15,7 +15,7 @@ void display1D(int *dp){
         cout<<dp[i]<<" ";
     }
 }
-void display2D(int **dp){
+void display2D(vector<vector<int>>dp){
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             cout<<dp[i][j]<<" ";
