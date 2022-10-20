@@ -25,6 +25,8 @@ void display2D(int **dp){
 }
 const static int N = 1e3;
 int dp[N][N];
+//THIS IS NOT THE CORRECT WAY OF USING RECCURSION
+//IS BIT COMPLECATED
 int recc(string s1, string s2, int n, int m,int &ans){
     if(n == 0 or m == 0){
         return 0;
@@ -32,7 +34,7 @@ int recc(string s1, string s2, int n, int m,int &ans){
     int cnt;
     if(s1[n-1] == s2[m-1]){
         cnt = recc(s1, s2, n-1, m-1, ans)+1;
-        ans = max(cnt, cnt);
+        ans = max(cnt, ans);
     }
     return cnt;
 }
